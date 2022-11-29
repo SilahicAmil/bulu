@@ -1,7 +1,7 @@
 const BuluHomePage = () => {
   return (
-    <div className="flex  justify-center items-center">
-      <h1 className="text-2xl bg-white text-black">Welcome to Bulu</h1>
+    <div className="justify-center items-center flex">
+      <h1 className="bg-white text-3xl text-black">Welcome to BULU</h1>
     </div>
   );
 };

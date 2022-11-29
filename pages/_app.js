@@ -1,7 +1,13 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+
+import SideNav from "../components/SideNav/SideNav";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <SideNav>
+      <Component {...pageProps} />
+    </SideNav>
+  );
 }
 
-export default MyApp
+export default MyApp;
