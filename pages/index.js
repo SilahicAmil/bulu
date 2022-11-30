@@ -5,6 +5,7 @@ const BuluHomePage = () => {
   const [movies, setMovies] = useState([]);
 
   const getMovieHandler = async () => {
+    // move API key in .env
     const response = await fetch(
       "https://api.themoviedb.org/3/movie/550?api_key=ae0cecc2f7ae230acde5101cb7218ae9"
     );
