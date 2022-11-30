@@ -24,7 +24,7 @@ const SideNav = (props) => {
               data-mdb-ripple="true"
               data-mdb-ripple-color="dark"
             >
-              Sidenav link 2
+              Icon
             </a>
           </li>
           <li className="relative">
@@ -34,7 +34,7 @@ const SideNav = (props) => {
               data-mdb-ripple="true"
               data-mdb-ripple-color="dark"
             >
-              Sidenav link 2
+              Icon
             </a>
           </li>
         </ul>
