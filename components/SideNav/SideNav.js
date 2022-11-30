@@ -11,6 +11,7 @@ const SideNav = (props) => {
               className="flex text-neutral-500 items-center text-sm py-4 px-6 h-12  "
               href="#!"
               data-mdb-ripple="true"
+              ß
               data-mdb-ripple-color="dark"
             >
               {/* Change to react icons */}
