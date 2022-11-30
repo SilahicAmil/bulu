@@ -1,7 +1,6 @@
-import { useCallback, useState } from "react";
+import { useState } from "react";
 
 const BuluHomePage = () => {
-  //
   const [movies, setMovies] = useState([]);
 
   const getMovieHandler = async () => {
@@ -20,10 +19,8 @@ const BuluHomePage = () => {
       <div className="justify-center items-center flex">
         <h1 className="bg-white text-3xl text-black">Welcome to BULU</h1>
         <button onClick={getMovieHandler}>Get Data</button>
-        {/* {movies.map((item) => {
-        return <p key={item}>{item.id}</p>;
-      })} */}
       </div>
+      {/* eventually pass all of these to card component */}
       <div className="flex justify-center items-center">
         <div className="p-4">{<p>The Movie ID: {movies.id}</p>}</div>
         <div className=" p-4">
