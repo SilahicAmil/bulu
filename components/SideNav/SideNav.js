@@ -2,7 +2,7 @@ const SideNav = (props) => {
   return (
     <>
       {/* wrap in card component type thingy */}
-      <div className="w-40 rounded-xl bg-[#d6be7a] h-full mt-15 shadow-md  px-1 absolute">
+      <div className="w-25 rounded-xl bg-[#d6be7a] h-full mt-15 shadow-md ml-10  px-1 absolute">
         <ul className="relative">
           <li className="relative">
             <a
@@ -11,6 +11,7 @@ const SideNav = (props) => {
               data-mdb-ripple="true"
               data-mdb-ripple-color="dark"
             >
+              {/* Change to react icons */}
               Sidenav link 1
             </a>
           </li>
