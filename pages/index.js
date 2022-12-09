@@ -49,6 +49,10 @@ const BuluHomePage = () => {
 
       const data = await response.json();
 
+      // create empty tv array
+      // for const key in data
+      // object of id and shit
+
       console.log(data.results);
       setIsLoading(false);
 
