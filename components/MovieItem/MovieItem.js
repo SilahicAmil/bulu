@@ -6,6 +6,7 @@ const TvShowItem = ({ name, date, popularity }) => {
   // probably use state here so nothing displays untul something is feteched
   //
   //    or get it in the API call and pass it seperately
+  //   figure out how to make this a horizontal list
 
   const readableDate = new Date(date).toLocaleDateString("en-US");
 
