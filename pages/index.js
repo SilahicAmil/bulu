@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-import MovieItem from "../components/MovieItem/MovieItem";
+import TvShowItem from "../components/MovieItem/MovieItem";
 
 const BuluHomePage = () => {
   const [movies, setMovies] = useState([{ id: "" }]);
@@ -65,10 +65,10 @@ const BuluHomePage = () => {
       <div className="justify-center items-center flex">
         <h1 className="bg-white text-3xl text-black">Welcome to BULU</h1>
         <form>
-          <input type="text" ref={inputMovieRef} />
+          {/* <input type="text" ref={inputMovieRef} />
           <button type="submit" onClick={getMovieHandler} className="p-4">
             Get Movie
-          </button>
+          </button> */}
           <input type="text" ref={inputTvRef} />
           <button className="p-4" type="submit" onClick={getTvShowHandler}>
             Get Tv Show
@@ -77,7 +77,7 @@ const BuluHomePage = () => {
       </div>
 
       {/*  pass all of these to card component */}
-      <div className="flex justify-center items-center">
+      {/* <div className="flex justify-center items-center">
         {isError ? <h1>An Error has Occurred!</h1> : null}
         {isLoading ? <p>Loading...</p> : null}
         <div className="p-4">{<p>The Movie ID: {movies[0].id}</p>}</div>
@@ -90,7 +90,7 @@ const BuluHomePage = () => {
       </div>
       <div>{<p>Overview: {movies[0].overview}</p>}</div>
       {/*  */}
-      <div className="flex justify-center items-center">
+      {/* <div className="flex justify-center items-center">
         {isError ? <h1>An Error has Occurred!</h1> : null}
         {isLoading ? <p>Loading...</p> : null}
         <div className="p-4">{<p>The Tv Show ID: {tvShow[0].id}</p>}</div>
@@ -100,12 +100,18 @@ const BuluHomePage = () => {
         <div className=" p-4">
           {<p>The Tv Show Popularity: {tvShow[0].popularity} %</p>}
         </div>
-      </div>
-      <div>{<p>Overview: {tvShow[0].overview}</p>}</div>
-      <MovieItem />
-      {/* {tvShow.map((item) => (
-        <h1 key={item.id}>{item.original_name}</h1>
-      ))} */}
+      </div> */}
+
+      {tvShow.map((item) => (
+        <TvShowItem
+          key={item.id}
+          title={item.title}
+          date={item.first_air_date}
+          name={item.original_name}
+          popularity={item.popularity}
+          image={item.image}
+        />
+      ))}
     </>
   );
 };
