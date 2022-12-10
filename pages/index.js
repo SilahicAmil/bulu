@@ -3,38 +3,11 @@ import { useRef, useState } from "react";
 import TvShowItem from "../components/MovieItem/MovieItem";
 
 const BuluHomePage = () => {
-  const [movies, setMovies] = useState([{ id: "" }]);
   const [tvShow, setTvShow] = useState([{ id: "" }]);
   const [isLoading, setIsLoading] = useState(undefined);
   const [isError, setIsError] = useState(null);
 
-  // probably could combine both of these refs
-  const inputMovieRef = useRef();
   const inputTvRef = useRef();
-
-  const getMovieHandler = async (e) => {
-    e.preventDefault();
-
-    const inputMovieRefValue = inputMovieRef.current.value;
-
-    // Handle empty string here
-    if (inputMovieRefValue === "") {
-      setIsLoading(false);
-      setIsError(true);
-      // alert("Invalid Input");
-    } else {
-      // move API key in .env
-      setIsLoading(true);
-      const response = await fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=ae0cecc2f7ae230acde5101cb7218ae9&language=en-US&query=${inputMovieRefValue}&page=1&include_adult=false`
-      );
-      const data = await response.json();
-      // console.log(data.results);
-      setIsLoading(false);
-
-      return setMovies(data.results);
-    }
-  };
 
   const getTvShowHandler = async (e) => {
     e.preventDefault();

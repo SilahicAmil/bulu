@@ -1,4 +1,5 @@
 import Image from "next/image";
+import MovieCard from "../MovieCard/MovieCard";
 
 const TvShowItem = ({ name, date, popularity }) => {
   //   probably need to useEffect to load the images
@@ -9,7 +10,7 @@ const TvShowItem = ({ name, date, popularity }) => {
   const readableDate = new Date(date).toLocaleDateString("en-US");
 
   return (
-    <div>
+    <MovieCard>
       <ul>
         <li>
           <Image
@@ -19,7 +20,7 @@ const TvShowItem = ({ name, date, popularity }) => {
             height={500}
           />
           <div>
-            <h1>Title: {name.toUpperCase()}</h1>
+            <h1>Title: {name}</h1>
           </div>
           <div>
             <span>Release Date: {readableDate}</span>
@@ -29,7 +30,7 @@ const TvShowItem = ({ name, date, popularity }) => {
           </div>
         </li>
       </ul>
-    </div>
+    </MovieCard>
   );
 };
 
