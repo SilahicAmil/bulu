@@ -15,7 +15,7 @@ const TvShowItem = ({ name, date, popularity }) => {
         <li>
           <Image
             src="/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg"
-            alt={name}
+            alt={name ? name : "photo title"}
             width={500}
             height={500}
           />

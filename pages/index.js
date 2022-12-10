@@ -15,7 +15,7 @@ const BuluHomePage = () => {
 
     if (inputTvRefValue === "") {
       setIsLoading(false);
-      // alert("Invalid Input");
+      setIsError(true);
     } else {
       setIsLoading(true);
       const response = await fetch(
@@ -32,6 +32,10 @@ const BuluHomePage = () => {
       return setTvShow(data.results);
     }
   };
+
+  if (isError) {
+    return <h1>Please Enter a Valid Input!</h1>;
+  }
 
   return (
     <>
