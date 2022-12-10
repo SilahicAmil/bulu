@@ -1,10 +1,12 @@
 import { useRef, useState } from "react";
 
+import MovieItem from "../components/MovieItem/MovieItem";
+
 const BuluHomePage = () => {
   const [movies, setMovies] = useState([{ id: "" }]);
   const [tvShow, setTvShow] = useState([{ id: "" }]);
   const [isLoading, setIsLoading] = useState(undefined);
-  const [isError, setIsError] = useState(undefined);
+  const [isError, setIsError] = useState(null);
 
   // probably could combine both of these refs
   const inputMovieRef = useRef();
@@ -50,8 +52,6 @@ const BuluHomePage = () => {
       const data = await response.json();
 
       // create empty tv array
-      // for const key in data
-      // object of id and shit
 
       console.log(data.results);
       setIsLoading(false);
@@ -102,6 +102,10 @@ const BuluHomePage = () => {
         </div>
       </div>
       <div>{<p>Overview: {tvShow[0].overview}</p>}</div>
+      <MovieItem />
+      {/* {tvShow.map((item) => (
+        <h1 key={item.id}>{item.original_name}</h1>
+      ))} */}
     </>
   );
 };
