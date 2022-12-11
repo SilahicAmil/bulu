@@ -1,7 +1,7 @@
 import Image from "next/image";
 import MovieCard from "../MovieCard/MovieCard";
 
-const TvShowItem = ({ name, date, popularity }) => {
+const TvShowItem = ({ name, date, popularity, image }) => {
   //   probably need to useEffect to load the images
   // probably use state here so nothing displays untul something is feteched
   //
@@ -9,6 +9,9 @@ const TvShowItem = ({ name, date, popularity }) => {
   //   figure out how to make this a horizontal list
 
   const readableDate = new Date(date).toLocaleDateString("en-US");
+  //   const imagePath = `https://image.tmdb.org/t/p/w500/${image}`;
+
+  console.log(image);
 
   return (
     <MovieCard>
@@ -16,7 +19,7 @@ const TvShowItem = ({ name, date, popularity }) => {
         <li>
           <Image
             src="/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg"
-            alt={name ? name : "photo title"}
+            alt={name ? name : "unsplash photo"}
             width={500}
             height={500}
           />
