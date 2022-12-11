@@ -9,9 +9,9 @@ const TvShowItem = ({ name, date, popularity, image }) => {
   //   figure out how to make this a horizontal list
 
   const readableDate = new Date(date).toLocaleDateString("en-US");
-  //   const imagePath = `https://image.tmdb.org/t/p/w500/${image}`;
+  //   const imagePath = `https://image.tmdb.org/t/p/w500${image}`;
 
-  console.log(image);
+  //   console.log(image);
 
   return (
     <MovieCard>
