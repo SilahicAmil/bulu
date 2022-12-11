@@ -47,7 +47,9 @@ const BuluHomePage = () => {
         </form>
       </div>
 
-      {isError ? <h1>Please Enter a Vald Input</h1> : null}
+      {isError ? (
+        <h1 className="text-red-500">Please Enter a Vald Input</h1>
+      ) : null}
 
       {tvShow.map((item) => (
         <TvShowItem
