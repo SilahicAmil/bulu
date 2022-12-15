@@ -23,6 +23,7 @@ const BuluHomePage = () => {
       );
 
       const data = await response.json();
+      console.log(data);
 
       console.log(data.results);
       setIsLoading(false);
